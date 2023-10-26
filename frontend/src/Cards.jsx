@@ -7,7 +7,9 @@ const Cards = ({ pokemon, index, flip, flipCard }) => {
       <div className={flip ? 'pokemon-card flipped' : 'pokemon-card'} onClick={() => flipCard(index)}>
         <div className="inner">
           <div className="front">
-          <img className='show' src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png`} alt={pokemon.id} />
+            <img
+              src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png`}
+              alt={pokemon.id} />
 
           </div>
           <div className="back">?</div>

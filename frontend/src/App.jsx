@@ -22,8 +22,9 @@ const App = () => {
     pokemon = [...Array(6)].map((_, index) => {
       let num
       while (true) {
-        num = Math.floor(Math.random() * 1000) + 1
+        num = Math.floor(Math.random() * 1000 + 1)
         if (pokemon.includes(num)) continue
+        if (num > 1000) continue
         break
       }
       return {id: num}
