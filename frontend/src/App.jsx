@@ -20,7 +20,12 @@ const App = () => {
 
   const setGame = () => {
     pokemon = [...Array(6)].map((_, index) => {
-      const num = Math.floor(new Date().getMilliseconds() * (Math.random() + 1))
+      let num
+      while (true) {
+        num = Math.floor(Math.random() * 1000) + 1
+        if (pokemon.includes(num)) continue
+        break
+      }
       return {id: num}
     })
     
@@ -37,8 +42,8 @@ const App = () => {
     const first = double[opened[0]]
     const second = double[opened[1]]
     
-    if (first.id === second.id) setMatch(match => [...match, first.id])
-    setTimeout(() => setOpen([]), 800)
+    if (first?.id === second?.id) setMatch(match => [...match, first?.id])
+    setTimeout(() => setOpen([]), 500)
     
   }, [opened])
   
@@ -46,7 +51,7 @@ const App = () => {
     if (match.length === 6) {
       setTimeout(() => {
         setShow(true)
-      }, 800);
+      }, 500);
     }
   }, [match])
 
@@ -65,7 +70,7 @@ const App = () => {
       <div className='cards'>
         
         {
-          double.map((pokemon, index) => {
+          double?.map((pokemon, index) => {
             let flip = false
             if (opened.includes(index)) flip = true
             if (match.includes(pokemon.id)) flip = true
