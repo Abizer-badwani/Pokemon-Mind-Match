@@ -57,13 +57,14 @@ const App = () => {
   }, [match])
 
   const flipCard = (index) => {
+    if (opened.length >= 2) return
+    
     if (opened.includes(index)) {
       return setOpen([])
     }
     setOpen(open => [...open, index])
     setScore(prev => prev+1)
   }
-
 
   return (
     <>
