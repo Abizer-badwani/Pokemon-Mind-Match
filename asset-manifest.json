@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/match-game/static/css/main.828dcdfa.css",
-    "main.js": "/match-game/static/js/main.b837c06d.js",
-    "index.html": "/match-game/index.html",
-    "main.828dcdfa.css.map": "/match-game/static/css/main.828dcdfa.css.map",
-    "main.b837c06d.js.map": "/match-game/static/js/main.b837c06d.js.map"
+    "main.css": "/Pokemon-Mind-Match/static/css/main.828dcdfa.css",
+    "main.js": "/Pokemon-Mind-Match/static/js/main.b837c06d.js",
+    "index.html": "/Pokemon-Mind-Match/index.html",
+    "main.828dcdfa.css.map": "/Pokemon-Mind-Match/static/css/main.828dcdfa.css.map",
+    "main.b837c06d.js.map": "/Pokemon-Mind-Match/static/js/main.b837c06d.js.map"
   },
   "entrypoints": [
     "static/css/main.828dcdfa.css",
