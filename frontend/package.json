@@ -1,7 +1,7 @@
 {
   "name": "frontend",
   "version": "0.1.0",
-  "homepage": "https://Abizer-badwani.github.io/match-game",
+  "homepage": "https://Abizer-badwani.github.io/Pokemon-Mind-Match",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
