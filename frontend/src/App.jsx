@@ -73,9 +73,13 @@ const App = () => {
         {
           double?.map((pokemon, index) => {
             let flip = false
+            let disable = false
             if (opened.includes(index)) flip = true
-            if (match.includes(pokemon.id)) flip = true
-            return <Cards key={index} index={index} pokemon={pokemon} flip={flip} flipCard={(index) => flipCard(index)} />
+            if (match.includes(pokemon.id)) {
+              flip = true
+              disable = true
+            }
+            return <Cards key={index} index={index} pokemon={pokemon} disable={disable} flip={flip} flipCard={(index) => flipCard(index)} />
           }
           )
         }

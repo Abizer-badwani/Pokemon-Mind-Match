@@ -1,10 +1,13 @@
-import React, { useState } from 'react'
+import React from 'react'
 
-const Cards = ({ pokemon, index, flip, flipCard }) => {
+const Cards = ({ pokemon, index, flip, flipCard, disable }) => {
   
   return (
     <>
-      <div className={flip ? 'pokemon-card flipped' : 'pokemon-card'} onClick={() => flipCard(index)}>
+      <div className={flip ? 'pokemon-card flipped' : 'pokemon-card'}
+        onClick={() => {
+          if(!disable) flipCard(index)
+      }}>
         <div className="inner">
           <div className="front">
             <img
